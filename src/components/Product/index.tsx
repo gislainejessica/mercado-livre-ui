@@ -18,20 +18,23 @@ const Product: React.FC = () => {
         <a href="#">Compartilhar</a>
         <a href="#">Vender um igual</a>
       </Row>
+
       <Panel>
         <Column>
-          <img src={TshirtImage} alt="Camisa Branca" className="Tshirt" />
-          <Gallery />
+          <Gallery>
+            <img src={TshirtImage} alt="Camisa Branca" className="Tshirt" />
+          </Gallery>
 
           <Info />
         </Column>
         {/* <ProductAction />
           <SellerInfo /> */}
 
-        <WarrantySection />
-        <WarrantySection />
-        <WarrantySection />
-        <Column></Column>
+        <Column>
+          <WarrantySection />
+          <WarrantySection />
+          <WarrantySection />
+        </Column>
       </Panel>
     </Container>
   );
@@ -53,6 +56,7 @@ const WarrantySection = () => (
         <p className="descriptiob">Não Garantimos nada</p>
       </span>
     </div>
+    <a href="#">Saiba mais sobre garantia</a>
   </Section>
 );
 
